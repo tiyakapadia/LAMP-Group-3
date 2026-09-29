@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>My Login Page</title>
+
+    <!-- Link the styles.css file to our HTML-->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Link javascript-->
+    <script src="script.js"></script>
+
+</head>
+
+<body class="login-body">
+
+    <!-- Login box container-->
+    <div class="login-box">
+
+        <h1>Personal Contact Manager</h1>
+
+        <!-- Button below submits, this onsubmit runs the processLogin JS method-->
+        <form onsubmit="processLogin(); return false;">
+
+            <label for="username">Username</label><br>
+            <input
+                id="username"
+                type="text"
+                oninput="checkInputs()"
+            >
+
+            <label for="password">Password</label><br>
+            <input
+                id="password"
+                type="password"
+                oninput="checkInputs()"
+            >
+            
+            <!-- Login button-->
+            <button
+                id="loginButton"
+                type="submit"
+                class="login-button"
+                disabled>
+                Login
+            </button>
+
+            <p id="message"></p>
+
+        </form>
+
+        <hr>
+
+        <p class="register-text">
+            Don't have an account?
+        </p>
+
+        <button
+            type="button"
+            class="login-button link-button"
+            onclick="window.location.href='register_user.html';">
+            Register User
+        </button>
+
+    </div> <!-- End of our container-->
+
+    
+
+</body>
+
+</html>
+
+
+

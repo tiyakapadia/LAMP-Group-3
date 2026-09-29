@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Personal Contact Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body class="login-body">
+
+    <div class="login-box">
+
+        <h1>Create Your Account</h1>
+
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input
+                type="text"
+                id="firstName"
+                placeholder="First Name"
+                onkeyup="checkRegisterInputs()"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input
+                type="text"
+                id="lastName"
+                placeholder="Last Name"
+                onkeyup="checkRegisterInputs()"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input
+                type="text"
+                id="username"
+                placeholder="Username"
+                onkeyup="checkRegisterInputs()"
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+                onkeyup="checkRegisterInputs()"
+            >
+        </div>
+
+        <button
+            id="registerButton"
+            class="login-button link-button"
+            onclick="processRegister()"
+            disabled>
+            Create Account
+        </button>
+
+        <p id="message" class="register-text"></p>
+
+        <p class="register-text">
+            Already have an account?
+            <a href="index.html">Login here</a>
+        </p>
+
+    </div>
+
+</body>
+</html>

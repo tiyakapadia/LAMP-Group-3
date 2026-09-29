@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Personal Contact Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body class="login-body">
+
+    <div class="login-box">
+        <h1>Login</h1>
+        <h2>Personal Contact Manager</h2>
+        
+        <!-- onkeyup triggers your checkInputs() function to enable the login button -->
+        <input type="text" id="username" placeholder="Username" onkeyup="checkInputs()">
+        <input type="password" id="password" placeholder="Password" onkeyup="checkInputs()">
+        
+        <!-- onclick triggers your processLogin() function -->
+        <button id="loginButton" class="login-button link-button" onclick="processLogin()" disabled>
+            Login
+        </button>
+        
+        <p id="message" class="register-text"></p>
+        
+        <!-- Links directly to the file already on your server -->
+        <p class="register-text">
+            Don't have an account? <a href="register_user.html">Register here</a>
+        </p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<title>Admin Panel - Contact Manager</title>
+<link rel="stylesheet" href="styles.css">
+<script src="script.js"></script>
+</head> 
+<body class="home-body" onload="loadAllUsers()">
+<header>
+    <h1 class="homepage-title">
+        System Administration
+    </h1>
+    <button
+        class="nav-button"
+        onclick="doLogout()">
+        Logout
+    </button>
+</header>
+
+<nav>
+    <button
+        class="nav-button"
+        onclick="window.location.href='home.html'">
+        My Contacts
+    </button>
+</nav>
+
+<main>
+
+    <!-- ==========================================
+         CREATE ADMIN ACCOUNT
+         ========================================== -->
+    <section class="content-panel">
+        <h2>Create Admin Account</h2>
+        <input
+            id="adminFirst"
+            class="search-box"
+            type="text"
+            placeholder="First Name">
+        <br><br>
+        <input
+            id="adminLast"
+            class="search-box"
+            type="text"
+            placeholder="Last Name">
+        <br><br>
+        <input
+            id="adminUser"
+            class="search-box"
+            type="text"
+            placeholder="Username">
+        <br><br>
+        <input
+            id="adminPass"
+            class="search-box"
+            type="password"
+            placeholder="Password">
+        <br><br>
+        <button
+            class="nav-button"
+            onclick="createAdminAccount()">
+            Create Admin
+        </button>
+        <p id="adminMessage"></p>
+    </section>
+
+    <!-- ==========================================
+         MANAGE USERS
+         ========================================== -->
+    <section class="content-panel">
+        <h2>Manage Users</h2>
+        <input
+            id="userSearchInput"
+            class="search-box"
+            type="text"
+            placeholder="Search all users..."
+            onkeyup="searchUsers()">
+
+        <button
+            class="nav-button"
+            onclick="searchUsers()">
+            Search
+        </button>
+
+        <button
+            class="nav-button"
+            onclick="loadAllUsers()">
+            Show All
+        </button>
+
+        <p
+            id="userSearchMessage"
+            style="color:red;">
+        </p>
+
+        <br><br>
+
+        <table id="usersTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="usersBody">
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ==========================================
+         CHANGE PASSWORD MODAL (Hidden by default)
+         ========================================== -->
+    <div id="passwordModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 1000; align-items: center; justify-content: center;">
+        <div class="content-panel" style="width: 400px; margin: 10% auto; position: relative;">
+            <h2>Change User Password</h2>
+            
+            <input type="hidden" id="resetUserId">
+            
+            <label>New Password (min 8 characters)</label><br>
+            <!-- type="password" hides the characters as dots for security -->
+            <input id="resetPasswordInput" class="search-box" type="password" placeholder="Enter new password"><br><br>
+
+            <button class="nav-button" onclick="saveNewPassword()">Save Password</button>
+            <button class="delete-button" onclick="closePasswordModal()">Cancel</button>
+            
+            <p id="passwordModalMessage" style="margin-top: 15px; font-weight: bold;"></p>
+        </div>
+    </div>
+
+</main>
+</body> 
+</html>

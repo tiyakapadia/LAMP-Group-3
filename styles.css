@@ -1,0 +1,265 @@
+/* ==========================================
+   GLOBAL DARK THEME
+   ========================================== */
+body {
+    background-color: #0D0D0F;
+    color: #F5F5F5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0D0D0F;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2A2A2A;
+}
+
+.homepage-title {
+    color: #F5F5F5;
+    margin: 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    background-color: #0D0D0F;
+    padding: 15px 40px;
+    display: flex;
+    gap: 15px;
+    border-bottom: 1px solid #2A2A2A;
+}
+
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   BUTTONS
+   ========================================== */
+.nav-button, .login-button {
+    background-color: #D4AF2C;
+    color: #0D0D0F;
+    border: none;
+    padding: 10px 20px;
+    font-weight: 800;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background 0.3s;
+}
+
+.nav-button:hover, .login-button:hover {
+    background-color: #E2C044;
+}
+
+.delete-button {
+    background-color: transparent;
+    color: #D4AF2C;
+    border: 1px solid #D4AF2C;
+    padding: 8px 16px;
+    font-weight: 800;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #D4AF2C;
+    color: #0D0D0F;
+}
+
+/* ==========================================
+   THE SLIDE VIBE HERO BANNER
+   ========================================== */
+.vibe-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 40px;
+}
+
+.vibe-hero-left {
+    flex: 1.5;
+}
+
+.vibe-overline {
+    color: #D4AF2C;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.vibe-title {
+    color: #F5F5F5;
+    font-size: 4.5rem; 
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    letter-spacing: -1px;
+}
+
+.vibe-line {
+    width: 100px;
+    height: 4px;
+    background-color: #D4AF2C;
+}
+
+.vibe-hero-right {
+    flex: 1;
+}
+
+/* ==========================================
+   PANELS & CARDS
+   ========================================== */
+.content-panel, .vibe-card {
+    background-color: #0D0D0F;
+    border: 2px solid #D4AF2C;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.content-panel h2, .vibe-card h3 {
+    color: #D4AF2C;
+    text-transform: uppercase;
+    margin-top: 0;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+
+.gold-text {
+    color: #D4AF2C;
+    font-weight: bold;
+}
+
+/* ==========================================
+   INPUTS & TABLES
+   ========================================== */
+.search-box {
+    background-color: #0D0D0F;
+    border: 1px solid #3A3A3A;
+    color: #F5F5F5;
+    padding: 12px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: #D4AF2C;
+}
+
+label {
+    color: #CFCFCF;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #0D0D0F;
+    color: #D4AF2C;
+    text-align: left;
+    padding: 15px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #D4AF2C;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #2A2A2A;
+    color: #E5E5E5;
+}
+
+tr:hover td {
+    background-color: #171719;
+}
+
+/* ==========================================
+   LOGIN SCREEN OVERRIDES
+   ========================================== */
+.login-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #0D0D0F;
+}
+
+.login-box {
+    background-color: #0D0D0F;
+    border: 2px solid #D4AF2C;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-box h1 {
+    color: #F5F5F5;
+    text-transform: uppercase;
+    margin-top: 0;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.login-box h2 {
+    color: #D4AF2C;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.register-text a {
+    color: #D4AF2C;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-text a:hover {
+    color: #E2C044;
+    text-decoration: underline;
+}
+
+#registerButton {
+    display: block;
+    margin: 20px auto;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    width: 130px;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.form-group input {
+    width: 250px;
+    box-sizing: border-box;
+}
