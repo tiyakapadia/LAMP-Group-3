@@ -176,8 +176,9 @@ window.onload = function()
 
     document.getElementById("username").innerHTML = username;
     document.getElementById("welcomeMessage").innerHTML = "Welcome back, " + firstName + "!";
-    document.getElementById("userName").innerHTML = firstName + " " + lastName;
-    document.getElementById("userId").innerHTML = userId;
+    //document.getElementById("userName").innerHTML = firstName + " " + lastName;
+    //document.getElementById("userId").innerHTML = userId;
+    doSearch();
 };
 
 //Add new contact (Now sends the VIP status to the database)
