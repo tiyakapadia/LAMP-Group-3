@@ -1,0 +1,23 @@
+info:
+  name: Invalid Login
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{urlBase}}/api/index.php"
+  body:
+    type: json
+    data: |-
+      {
+        "login": "Camera",
+        "password": "EPitom"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: true

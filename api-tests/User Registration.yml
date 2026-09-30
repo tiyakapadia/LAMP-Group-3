@@ -1,0 +1,29 @@
+info:
+  name: User Registration
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{urlBase}}/api/index.php?action=register"
+  params:
+    - name: action
+      value: register
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "firstName": "Cam",
+        "lastName": "Boing",
+        "login": "Camera",
+        "password":"Epitome124"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
